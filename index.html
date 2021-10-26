@@ -8,6 +8,24 @@
 </head>
 
 <body>
+    <script>
+        function submitForm() {
+            confirmForm = confirm("Do You Want to Submit Form ? ")
+            if (confirmForm == true) {
+                alert("Form Submitted Successfully...")
+                console.log("Form Submitted Successfully...")
+            }
+            else {
+                alert("Please Check the Form Details...")
+                console.log("Please Check the Form Details...")
+            }
+        }
+        function promptAlert() {
+            var1 = prompt("Search Here : ");
+            alert("You've Searched : " + var1)
+            console.log("You've Searched : " + var1)
+        }
+    </script>
     <header>
         <table>
             <tr>
@@ -23,7 +41,7 @@
                     </ul>
                 </td>
                 <td id="middle">
-                    <input type="text" placeholder="&#xF002; Search" style="font-family: Arial, FontAwesome;">
+                    <input type="text" placeholder="&#xF002; Search" style="font-family: Arial, FontAwesome;" onclick=promptAlert() >
                 </td>
                 <td id="right">
                     <a href="https://www.linkedin.com/in/yogeshlate" target="_blank"><i
@@ -103,7 +121,7 @@
     </div>
     <div id="chat">
         <h1>Chat with us</h1>
-        <form action="#" method="post">
+        <form method="dialog">
             <fieldset>
                 <legend>
                     Chat Bot
@@ -111,15 +129,15 @@
                 <label for="chat">
                     Enter the Subject
                 </label><input class="input" name="chat" id="chat" type="text" placeholder="Enter The Subject"
-                    autocomplete="off" required>
+                    autocomplete="off">
                 <br>
                 <label for="chatmessage">
                     Enter the Description
                 </label>
-                <textarea name="chatmessage" id="chatmessage" cols="60" rows="8"
-                    placeholder="Enter Description"></textarea>
+                <textarea name="chatmessage" id="chatmessage" cols="60" rows="8" placeholder="Enter Description"
+                    autocomplete="off"></textarea>
                 <br>
-                <input style="width: max-content;" type="submit" value="Send Message">
+                <input style="width: max-content;" type="submit" value="Send Message" onclick=submitForm() />
             </fieldset>
 
         </form>
